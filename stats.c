@@ -8,7 +8,7 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
     
     int counter = 0;
     float sum = 0, min, max;
-    if((numberset != (void *)0) || (setlength == 0))
+    if((numberset != (void *)0) || (setlength > 0))
     {
         min = numberset[0];
         max = numberset[0];
