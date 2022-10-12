@@ -52,7 +52,7 @@ void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stat
 {
     int setlength = sizeof(alerters) / sizeof(alerters[0]);
     int counter = 0;
-    printf("Array Size - %d, %d\n", sizeof(alerters), sizeof(alerters[0]);
+    printf("Array Size - %d, %d\n", sizeof(alerters), sizeof(alerters[0]));
     if(computedStats.max > maxThreshold)
     {
         while(counter < setlength)
