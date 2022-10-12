@@ -1,3 +1,4 @@
+#include <math.h>
 #include "stats.h"
 
 struct Stats compute_statistics(const float* numberset, int setlength) {
@@ -30,6 +31,15 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
         s.average = sum / setlength;
         s.min = min;
         s.max = max;
+    }
+    else
+    {
+        #ifdef NAN
+            printf("NAN supported");
+                s.average = NAN;
+                s.min = NAN;
+                s.max = NAN;
+        #endif
     }
     
     return s;
